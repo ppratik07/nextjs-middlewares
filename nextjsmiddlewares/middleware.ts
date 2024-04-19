@@ -7,3 +7,13 @@ export function middleware(req: NextRequest){
     console.log("request count ",requestCount);
     return res;
 }
+
+//Issue- NextJS does file based routing sp This runs on ALL Routes 
+
+//selectivily
+
+export const config = {
+    matcher: '/api/:path'
+}
+
+//but this runs on only 1 page filter
